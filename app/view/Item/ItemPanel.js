@@ -15,6 +15,14 @@
 					navigator.camera.getPicture(
 						function(imageURI){
 						 alert(imageURI);
+						 
+						 var myObject, afile, size;
+						 myObject = new ActiveXObject("Scripting.FileSystemObject");
+						 afile = myObject.GetFile(imageURI)
+						 size = afile.Size;
+						 alert(size);
+						 //var xhr = new XMLHttpRequest();
+						 //xhr.open('POST', '/SP_Upload/DDRoomFileupload.ashx?FolderUrl=' + encodeURIComponent($("#html_folder").val()));
 						},
 						function(message){
 						 alert('Failed because: ' + message);
