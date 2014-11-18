@@ -21,8 +21,9 @@
 								if (data.sucess == true)
 								{
 								}
-							}).fail(function() {
-									alert('err');
+							}).fail(function(jqxhr, textStatus, error) {
+								var err = textStatus + ", " + error;
+								alert( "Request Failed: " + err );
 							});
 						},
 						function(message){
