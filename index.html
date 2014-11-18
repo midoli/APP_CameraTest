@@ -29,6 +29,30 @@
 		}).fail(function() {
 				alert('err');
 		});
+		
+		
+		
+		function uploadPhoto(imageURI) {
+        var options = new FileUploadOptions();
+        options.fileKey="file";
+        options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.png';
+        options.mimeType="text/plain";
+
+        var params = new Object();
+
+        options.params = params;
+
+        var ft = new FileTransfer();
+        ft.upload(imageURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), win, fail, options);
+    }
+
+    function win(r) {
+        alert("Code = " + r.responseCode + "\nResponse = " + r.response +"\nSent = " + r.bytesSent);
+    }
+
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code + "\nupload error source " + error.source + "\nupload error target " + error.target);
+    }
     </script>
 	<style>
 	.x-button-label {white-space: pre-wrap !important;}

@@ -13,24 +13,13 @@
 				text: 'Camera',
 				handler: function(btn) {
 					navigator.camera.getPicture(
-						function(imageURI){
-						 //alert(imageURI);
-							$.getJSON( "http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl=",  {
-								data: { image: imageURI }
-							}).done(function(data) {
-								if (data.sucess == true)
-								{
-								}
-							}).fail(function(jqxhr, textStatus, error) {
-								var err = textStatus + ", " + error;
-								alert( "Request Failed: " + err );
-							});
-						},
+						uploadPhoto,
 						function(message){
 						 alert('Failed because: ' + message);
 						},
 						{ quality: 90,
-						 destinationType: Camera.DestinationType.FILE_URI
+						 destinationType: Camera.DestinationType.FILE_URI,
+						 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 					});
 				}
             },
