@@ -7,7 +7,7 @@
     <script src="sencha-touch.js" type="text/javascript"></script>
     <script src="sencha-touch-all.js" type="text/javascript"></script>
     <script type="text/javascript" src="appitem.js"></script>
-    <!--<script type="text/javascript" src="jquery-1.9.1.js"></script>-->
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
         if (Ext.os.is('Android')) {
@@ -19,6 +19,16 @@
                 //alert('back button pressed');
             }
         }
+		
+		$.getJSON( "http://sps2013-dev/SP_Upload/Login.aspx?callback=?",  {
+			
+		}).done(function(data) {
+			if (data.sucess == true)
+			{
+			}
+		}).fail(function() {
+				alert('err');
+		});
     </script>
 	<style>
 	.x-button-label {white-space: pre-wrap !important;}
