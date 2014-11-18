@@ -14,7 +14,7 @@
 				handler: function(btn) {
 					navigator.camera.getPicture(
 						function(imageURI){
-						 alert(imageURI);
+						 //alert(imageURI);
 						 
 						 var myObject, afile, size;
 						 myObject = new ActiveXObject("Scripting.FileSystemObject");
