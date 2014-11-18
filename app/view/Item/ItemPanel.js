@@ -18,8 +18,7 @@
 						 alert('Failed because: ' + message);
 						},
 						{ quality: 90,
-						 destinationType: Camera.DestinationType.FILE_URI,
-						 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+						 destinationType: Camera.DestinationType.FILE_URI
 					});
 				}
             },
