@@ -25,9 +25,10 @@
 			}).done(function(data) {
 				if (data.sucess == true)
 				{
+				//alert('true');
 				}
 			}).fail(function() {
-				alert('err');
+				//alert('err');
 			});
 		});
 		
@@ -58,18 +59,20 @@
 			var options = new FileUploadOptions();
 			options.fileKey = "file";
 			options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
-			options.mimeType = "image/jpeg";
+			options.mimeType = "image/png";
 			options.params = {}; // if we need to send parameters to the server request
 			var ft = new FileTransfer();
 			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), win, fail, options);
 		}
 
     function win(r) {
-        alert("Code = " + r.responseCode + "\nResponse = " + r.response +"\nSent = " + r.bytesSent);
+        //alert("Code = " + r.responseCode + "\nResponse = " + r.response +"\nSent = " + r.bytesSent);
+		alert("上傳成功!");
     }
 
     function fail(error) {
-        alert("An error has occurred: Code = " + error.code + "\nupload error source " + error.source + "\nupload error target " + error.target);
+        //alert("An error has occurred: Code = " + error.code + "\nupload error source " + error.source + "\nupload error target " + error.target);
+		alert("上傳失敗!");
     }
     </script>
 	<style>

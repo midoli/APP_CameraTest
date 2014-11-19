@@ -15,20 +15,13 @@
 					navigator.camera.getPicture(
 						uploadPhoto,
 						function(message){
-						 alert('Failed because: ' + message);
+							alert('Failed because: ' + message);
 						},
 						{ 
 						 quality: 30,
 						 encodingType: Camera.EncodingType.PNG,
-						 destinationType: Camera.DestinationType.FILE_URI  //DATA_URL, FILE_URI
+						 destinationType: Camera.DestinationType.FILE_URI  //DATA_URL
 					});
-				}
-            },
-			{
-                xtype: 'button',
-				text: 'Upload',
-				handler: function(btn) {
-					
 				}
             }]
         }
