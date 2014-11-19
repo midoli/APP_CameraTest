@@ -20,16 +20,16 @@
             }
         }
 		$(document).ready(function(){
-			$.getJSON("http://192.168.9.37/SP_Upload/Login.aspx?callback=?",  {
+			//$.getJSON("http://192.168.9.37/SP_Upload/Login.aspx?callback=?",  {
 				
-			}).done(function(data) {
-				if (data.sucess == true)
-				{
-				//alert('true');
-				}
-			}).fail(function() {
-				//alert('err');
-			});
+			//}).done(function(data) {
+			//	if (data.sucess == true)
+			//	{
+			//	//alert('true');
+			//	}
+			//}).fail(function() {
+			//	//alert('err');
+			//});
 		});
 		
 		
@@ -62,17 +62,21 @@
 			options.mimeType = "image/png";
 			options.params = {}; // if we need to send parameters to the server request
 			var ft = new FileTransfer();
+			var res = "";
 			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), win, fail, options);
+			alert(res);
 		}
 
     function win(r) {
         //alert("Code = " + r.responseCode + "\nResponse = " + r.response +"\nSent = " + r.bytesSent);
-		alert("上傳成功!");
+		res = "上傳成功";
+		return;
     }
 
     function fail(error) {
         //alert("An error has occurred: Code = " + error.code + "\nupload error source " + error.source + "\nupload error target " + error.target);
-		alert("上傳失敗!");
+		res = "上傳失敗";
+		return;
     }
     </script>
 	<style>
