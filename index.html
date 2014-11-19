@@ -63,20 +63,17 @@
 			options.params = {}; // if we need to send parameters to the server request
 			var ft = new FileTransfer();
 			var res = "";
-			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), win, fail, options);
-			alert(res);
+			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), function(){alert("上傳成功");}, function(){alert("上傳失敗");}, options);
+			
 		}
 
     function win(r) {
         //alert("Code = " + r.responseCode + "\nResponse = " + r.response +"\nSent = " + r.bytesSent);
-		res = "上傳成功";
-		return;
+		
     }
 
     function fail(error) {
         //alert("An error has occurred: Code = " + error.code + "\nupload error source " + error.source + "\nupload error target " + error.target);
-		res = "上傳失敗";
-		return;
     }
     </script>
 	<style>
