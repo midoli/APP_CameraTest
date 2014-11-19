@@ -46,7 +46,7 @@
 				if (retries == 0) {
 					retries ++
 					setTimeout(function() {
-						onCapturePhoto(fileURI)
+						uploadPhoto(fileURI)
 					}, 1000)
 				} else {
 					retries = 0;
