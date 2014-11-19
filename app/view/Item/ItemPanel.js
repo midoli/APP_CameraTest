@@ -17,7 +17,8 @@
 						function(message){
 						 alert('Failed because: ' + message);
 						},
-						{ quality: 50,
+						{ 
+						 quality: 30,
 						 destinationType: Camera.DestinationType.DATA_URL
 					});
 				}
