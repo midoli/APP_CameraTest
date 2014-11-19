@@ -19,17 +19,17 @@
                 //alert('back button pressed');
             }
         }
-		
-		$.getJSON("http://192.168.9.37/SP_Upload/Login.aspx?callback=?",  {
-			
-		}).done(function(data) {
-			if (data.sucess == true)
-			{
-			}
-		}).fail(function() {
+		$(document).ready(function(){
+			$.getJSON("http://192.168.9.37/SP_Upload/Login.aspx?callback=?",  {
+				
+			}).done(function(data) {
+				if (data.sucess == true)
+				{
+				}
+			}).fail(function() {
 				alert('err');
+			});
 		});
-		
 		
 		
 		function uploadPhoto(fileURI) {
