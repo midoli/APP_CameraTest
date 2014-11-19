@@ -19,7 +19,8 @@
 						},
 						{ 
 						 quality: 30,
-						 destinationType: Camera.DestinationType.DATA_URL
+						 encodingType: Camera.EncodingType.PNG,
+						 destinationType: Camera.DestinationType.NATIVE_URI  //DATA_URL, FILE_URI
 					});
 				}
             },
