@@ -1,6 +1,9 @@
 ﻿Ext.define('CaremaTest.view.Item.ItemPanel', {
     extend: 'Ext.Panel',
     id: 'itempanel',
+    requires: [
+        'CaremaTest.view.Item.ItemList'
+    ],
     config: {
         layout: 'fit',
         items: [
@@ -24,7 +27,10 @@
 					});
 				}
             }]
-        }
+        },
+		{
+			xtype: 'Itemlist'
+		}
         ]
     }
 });

@@ -34,13 +34,10 @@
 		
 		
 		function uploadPhoto(fileURI) {
-			//$.post( "http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl=", {data: imageData}, function(data) {
-			//	alert("Image uploaded!");
-			//});
 			var win = function (r) {
-			clearCache();
-			retries = 0;
-			alert('Done!');
+				clearCache();
+				retries = 0;
+				alert('Done!');
 			}
 	 
 			var fail = function (error) {
@@ -63,7 +60,7 @@
 			options.params = {}; // if we need to send parameters to the server request
 			var ft = new FileTransfer();
 			var res = "";
-			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), function(){alert("上傳成功");}, function(){alert("上傳失敗");}, options);
+			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), function(){alert("上傳成功");}, function(error){alert("上傳失敗:" + error.code);}, options);
 			
 		}
 

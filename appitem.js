@@ -13,6 +13,7 @@ Ext.application({
         
     ],
     stores: [
+		'Item'
     ],
     launch: function () {
         Ext.create('CaremaTest.view.MainItem');
