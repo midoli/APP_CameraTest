@@ -30,6 +30,27 @@
 			//}).fail(function() {
 			//	//alert('err');
 			//});
+			
+			var soapEnv1 =
+					"<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'> \
+						<soapenv:Body> \
+							<Login xmlns='http://schemas.microsoft.com/sharepoint/soap/'> \
+								<username>fba_fioda</username> \
+								<password>@1qaz2wsx</password> \
+							</Login> \
+						</soapenv:Body> \
+					</soapenv:Envelope>";
+
+				jQuery.ajax({
+					url: "http://acerpsgdemo.midolitech.net:8080/_vti_bin/authentication.asmx?op=Login",
+					type: "POST",
+					dataType: "xml",
+					data: soapEnv1,
+					complete: function(data){
+						alert(data.responseXML);
+					}
+				}); 
+
 		});
 		
 		
@@ -60,7 +81,13 @@
 			options.params = {}; // if we need to send parameters to the server request
 			var ft = new FileTransfer();
 			var res = "";
-			ft.upload(fileURI, encodeURI("http://192.168.9.37/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), function(){alert("上傳成功");}, function(error){alert("上傳失敗:" + error.code);}, options);
+			ft.upload(fileURI, encodeURI("http://59.124.220.39:8181/SP_Upload/DDRoomFileupload.ashx?FolderUrl="), 
+				function(){
+					alert("上傳成功");
+				}, 
+				function(error){
+					alert("上傳失敗:" + error.code);
+				}, options);
 			
 		}
 
