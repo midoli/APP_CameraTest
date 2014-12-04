@@ -48,8 +48,9 @@
 					data: soapEnv1,
 					complete: function(data){
 						alert(data.responseXML);
-					}
-				}); 
+					},
+					contentType: "text/xml; charset=\"utf-8\""
+				});
 
 		});
 		
