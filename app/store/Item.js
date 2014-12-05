@@ -6,14 +6,17 @@
         pageSize: 100,
         model: 'CaremaTest.model.Item',
         proxy: {
-            type: 'jsonp',
-            url: '',//'http://59.124.220.39:8181/SP_Upload/DDRoomFile.ashx',
+            type: 'ajax',
+            url: 'http://acerpsgdemo.midolitech.net:8080/_vti_bin/listdata.svc/',
+            headers: { "Accept": "application/json;odata=verbose" },
+            cache: false,
             extraParams: {
-                FolderUrl: ''
+                //$orderby: "修改時間 desc",
+                $filter: ""
             },
             reader: {
                 type: 'json',
-                rootProperty: 'root'
+                rootProperty: 'd.EntitySets'
             }
         }
     }

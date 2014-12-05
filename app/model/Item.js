@@ -2,8 +2,7 @@
     extend: 'Ext.data.Model',
     config: {
         fields: [
-           'LinkFilename',
-		   'FolderUrl'
+           'EntitySets'
         ]
     }
 
