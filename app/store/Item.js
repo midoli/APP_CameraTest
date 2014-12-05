@@ -16,7 +16,7 @@
             },
             reader: {
                 type: 'json',
-                rootProperty: 'd.EntitySets'
+                rootProperty: 'd'
             }
         }
     }
