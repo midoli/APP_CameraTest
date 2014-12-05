@@ -7,7 +7,7 @@
         model: 'CaremaTest.model.Item',
         proxy: {
             type: 'ajax',
-            url: 'http://acerpsgdemo.midolitech.net:8080/_vti_bin/listdata.svc/',
+            url: 'http://acerpsgdemo.midolitech.net:8080/_vti_bin/listdata.svc/文件/',
             headers: { "Accept": "application/json;odata=verbose" },
             cache: false,
             extraParams: {
@@ -16,7 +16,7 @@
             },
             reader: {
                 type: 'json',
-                rootProperty: 'd'
+                rootProperty: 'd.results'
             }
         }
     }

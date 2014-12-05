@@ -5,7 +5,7 @@
         store: 'Item',
         itemTpl: new Ext.XTemplate(
               '<div style="">',
-			  '{EntitySets}',
+			  '{名稱}',
 			  '</div>'),
 		listeners: {
             itemtap: function (list, index, target, record, e, eOpts) {

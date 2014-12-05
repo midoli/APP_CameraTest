@@ -2,7 +2,7 @@
     extend: 'Ext.data.Model',
     config: {
         fields: [
-           'EntitySets'
+           '名稱'
         ]
     }
 
