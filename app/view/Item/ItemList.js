@@ -5,7 +5,7 @@
         store: 'Item',
         itemTpl: new Ext.XTemplate(
               '<div style="">',
-			  '{名稱}',
+			  '<img src="http://acerpsgdemo.midolitech.net:8080/Shared%20Documents/{名稱}" width=300/>',
 			  '</div>'),
 		listeners: {
             itemtap: function (list, index, target, record, e, eOpts) {
